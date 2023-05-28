@@ -1,3 +1,12 @@
+# portfolio_photo - application front
+Ce projet est encore en développement. Actuellement très concentré sur le système de token côté front pour permettre l'accès aux routes et pages protégées.
+
+## Serveur API
+Le serveur api accéssible en [cliquant ici](https://github.com/mathieuCstn/portfolio_photo_api_back).
+
+## Maquette Figma
+Vous pouvez consulté la maquette figma en [cliquant ici](https://www.figma.com/file/nwRXEbc6HkD2QxuD3fW2B0/Portfolio-%26-vente-photo?type=design&t=Pd7MG4vIJMKfKroQ-6).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
