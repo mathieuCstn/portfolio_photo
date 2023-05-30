@@ -24,10 +24,10 @@ function Login() {
         dispatch(setCredentials(data))
     }
     return (
-        <section id="Login">
+        <section id="login">
             <h1>Se Connecter</h1>
             <div className="login-display">
-                <form onSubmit={handleSubmit}>
+                <form id="login-form" onSubmit={handleSubmit}>
                     <label htmlFor="login-email">Email</label>
                     <input type="email" id="login-email" onChange={(e) => setEmail(e.currentTarget.value)} />
                     <label htmlFor="login-password">Password</label>

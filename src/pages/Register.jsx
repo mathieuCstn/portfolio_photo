@@ -48,13 +48,22 @@ function Register() {
             <h1>S'enregistrer</h1>
             <div className="register-display">
                 <p ref={errorRef} className={errorMessage ? "error-message" : "offscreen"} aria-live="assertive">{errorMessage}</p>
-                <form onSubmit={handleSubmit}>
+                <form id="register-form" onSubmit={handleSubmit}>
                     <label htmlFor="register-email">Email</label>
-                    <input type="email" onChange={e => setEmail(e.currentTarget.value)} />
-                    <label htmlFor="register-password">Mot de passe</label>
-                    <input type="password" id="register-password" onChange={e => setPassword(e.currentTarget.value)} value={password} />
-                    <label htmlFor="register-match-password">Confirmer ot de passe</label>
-                    <input type="password" id="register-match-password" onChange={e => setPassword(e.currentTarget.value)} value={password} />
+                    <input type="email" id="register-email" ref={userRef} autoComplete="off" onChange={e => setEmail(e.currentTarget.value)} required onFocus={() => setEmailFocus(true)} onBlur={() => setEmailFocus(false)}/>
+                    <label htmlFor="register-password"><span className={validPassword ? "valid" : "hide"}>✅ </span><span className={validPassword || !password ? "hide" : "invalid"}>👎 </span>Mot de passe</label>
+                    <input type="password" id="register-password" onChange={e => setPassword(e.currentTarget.value)} value={password} required aria-invalid={validPassword ? "false" : "true"} aria-describedby="passwordnote" onFocus={() => setPasswordFocus(true)} onBlur={() => setPasswordFocus(false)}/>
+                    <p className={passwordFocus && !validPassword ? "instructions" : "offscreen"}>
+                        Votre mot de passe doit :<br/>
+                        Contenir entre 8 et 24 charactères.<br/>
+                        Être composé de lettres majuscules, minuscules, de chiffres et d'au moins un caractère spéciale.<br/>
+                        Les caractère spéciaux autorisés : <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                    </p>
+                    <label htmlFor="register-match-password"><span className={validMatch ? "valid" : "hide"}>✅ </span><span className={validMatch || !matchPassword ? "hide" : "invalid"}>👎 </span>Confirmer votre mot de passe</label>
+                    <input type="password" id="register-match-password" onChange={e => setMatchPassword(e.currentTarget.value)} value={matchPassword} required aria-invalid={validMatch ? "false" : "true"} aria-describedby="confirmnote" onFocus={() => setMatchFocus(true)} onBlur={() => setMatchFocus(false)} />
+                    <p className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
+                        Doit correspondre au mot de passe rentré plus haut.
+                    </p>
                     <button>S'enregistrer</button>
                 </form>
             </div>
