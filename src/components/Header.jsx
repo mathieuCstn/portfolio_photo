@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-// import logoSignature from '../assets/logo-signature.svg'
-import logoSignature from '../assets/basquiat-plagiat.svg'
+import logoSignature from '../assets/logo-signature.svg'
 
 function Header() {
     return (
@@ -11,7 +10,7 @@ function Header() {
             <nav>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/gallery'>Gallery</NavLink>
-                <NavLink to='/login'>Login</NavLink>
+                <NavLink to='/login'>Se connecter</NavLink>
             </nav>
         </header>
     )
