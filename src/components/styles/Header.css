@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+header>* {
+    flex: 1;
+    border: red 1px solid;
+}
+
+header .logo {
+    height: 100%;
+}
+
+header img {
+    object-fit: cover;
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
