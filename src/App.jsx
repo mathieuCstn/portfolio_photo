@@ -13,13 +13,13 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setType } from './redux/screenDeviceSlice';
 
-const mediaQueryMobileDevice = window.matchMedia('(max-width: 820px)')
+const mediaQueryIsMobileDevice = window.matchMedia('(max-width: 820px)')
 
 function App() {
-  const [isMobileDisplay, setIsMobileDisplay] = useState(mediaQueryMobileDevice.matches)
+  const [isMobileDisplay, setIsMobileDisplay] = useState(mediaQueryIsMobileDevice.matches)
   const dispatch = useDispatch()
 
-  mediaQueryMobileDevice.addEventListener('change', (e) => {
+  mediaQueryIsMobileDevice.addEventListener('change', (e) => {
       setIsMobileDisplay(e.currentTarget.matches)
   })
 
@@ -29,7 +29,7 @@ function App() {
     } else {
       dispatch(setType('desktop'))
     }
-  }, [isMobileDisplay])
+  }, [isMobileDisplay, dispatch])
 
   return (
     <>
