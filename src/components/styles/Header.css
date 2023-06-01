@@ -5,20 +5,37 @@ header {
     height: 120px;
 }
 
-header>* {
+header > [class*="header-"] {
     flex: 1;
+    height: 100%;
     border: red 1px solid;
+}
+
+header > [class*="-left"] {
+    justify-content: flex-start;
+}
+
+header > [class*="-center"] {
+    justify-content: center;
+}
+
+header > [class*="-right"] {
+    justify-content: flex-end;
+}
+
+header > * {
+    display: flex;
+    align-items: center;
 }
 
 header .logo {
     height: 100%;
 }
 
-header img {
+header .logo img {
     object-fit: cover;
 }
 
 header nav {
-    display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }

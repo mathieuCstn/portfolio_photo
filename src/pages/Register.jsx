@@ -3,7 +3,7 @@ import axios from "../api/axios"
 import { Link } from "react-router-dom"
 
 const EMAIL_REGEX = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,5})+$/
-const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/
+const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#€$%]).{8,24}$/
 
 function Register() {
     const userRef = useRef()

@@ -9,8 +9,28 @@ import Products from './pages/Products';
 import Orders from './pages/Orders';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setType } from './redux/screenDeviceSlice';
+
+const mediaQueryMobileDevice = window.matchMedia('(max-width: 820px)')
 
 function App() {
+  const [isMobileDisplay, setIsMobileDisplay] = useState(mediaQueryMobileDevice.matches)
+  const dispatch = useDispatch()
+
+  mediaQueryMobileDevice.addEventListener('change', (e) => {
+      setIsMobileDisplay(e.currentTarget.matches)
+  })
+
+  useEffect(() => {
+    if(isMobileDisplay) {
+      dispatch(setType('mobile'))
+    } else {
+      dispatch(setType('desktop'))
+    }
+  }, [isMobileDisplay])
+
   return (
     <>
       <Routes>
