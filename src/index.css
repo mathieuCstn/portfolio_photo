@@ -1,21 +1,29 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-.hide {
-  display: none;
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins/Poppins-Regular.ttf');
 }
 
-.offscreen {
-  display: none;
+:root {
+  --color-palette-black: #000;
+  --color-palette-white: #fff;
+  --color-palette-dark-grey: #1E1E1E;
+  --color-palette-light-grey: #F3F3F3;
+  --color-palette-orange: #EC853B;
+
+  --font-palette-desktop-header: 600 72px 'Playfair Display';
+  --font-palette-desktop-title-1: 400 24px 'Playfair Display';
+  --font-palette-desktop-title-2: 400 24px 'Poppins';
+  --font-palette-desktop-body-highlight: 600 20px 'Poppins';
+  --font-palette-desktop-body: 400 20px 'Poppins';
+
+  --font-palette-mobile-header: 600 40px 'Playfair Display';
+  --font-palette-mobile-title-1: 400 20px 'Playfair Display';
+  --font-palette-mobile-title-2: 400 20px 'Poppins';
+  --font-palette-mobile-body-highlight: 600 16px 'Poppins';
+  --font-palette-mobile-body: 400 16px 'Poppins';
 }

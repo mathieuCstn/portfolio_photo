@@ -8,7 +8,6 @@ header {
 header > [class*="header-"] {
     flex: 1;
     height: 100%;
-    border: red 1px solid;
 }
 
 header > [class*="-left"] {

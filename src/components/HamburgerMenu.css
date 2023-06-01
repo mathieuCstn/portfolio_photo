@@ -1,4 +1,8 @@
+/* Hamburger icon animation */
+
 .ham {
+    position: relative;
+    z-index: 9999;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: transform 400ms;
@@ -24,26 +28,46 @@
     stroke-linecap:round;
 }
 
-.ham6 .top {
+.ham .top {
     stroke-dasharray: 40 172;
 }
 
-.ham6 .middle {
+.ham .middle {
     stroke-dasharray: 40 111;
 }
 
-.ham6 .bottom {
+.ham .bottom {
     stroke-dasharray: 40 172;
 }
 
-.ham6.active .top {
+.ham.active .top {
     stroke-dashoffset: -132px;
 }
 
-.ham6.active .middle {
+.ham.active .middle {
     stroke-dashoffset: -71px;
 }
 
-.ham6.active .bottom {
+.ham.active .bottom {
     stroke-dashoffset: -132px;
+}
+
+/* Hamburger menu display */
+
+.hamburger-menu-display {
+    position: fixed;
+    z-index: 9998;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+}
+
+.hamburger-menu-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

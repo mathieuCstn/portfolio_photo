@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import axios from "../api/axios"
 import { Link } from "react-router-dom"
+import './Register.css'
 
 const EMAIL_REGEX = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,5})+$/
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#€$%]).{8,24}$/
