@@ -5,9 +5,9 @@ const userSlice = createSlice({
     initialState: {userId: null, token: null, roles: []},
     reducers: {
         setCredentials: (state, action) => {
-            const { userId, accessToken, roleList } = action.payload
+            const { userId, accessToken, roles } = action.payload
             state.userId = userId
-            state.roles = roleList
+            state.roles = roles
             state.token = accessToken
         },
         logOut: (state, action) => {

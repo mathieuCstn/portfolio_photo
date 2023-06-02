@@ -39,6 +39,7 @@ function Header() {
                     </nav>
                     <nav className='header-right'>
                         <NavLink to='/login'>Se connecter</NavLink>
+                        <NavLink to='/dashboard'>Dashboard</NavLink>
                     </nav>
                 </>
             )}

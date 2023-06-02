@@ -4,7 +4,8 @@ import Layout from './components/Layout'
 import RequireAuth from './components/RequireAuth';
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
-import Dashboard from './components/Dashboard';
+import DashboardLayout from './components/DashboardLayout';
+import Dashboard from './pages/Dashboard';
 import Products from './pages/Products';
 import Orders from './pages/Orders';
 import Login from './pages/Login';
@@ -12,6 +13,7 @@ import Register from './pages/Register';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setType } from './redux/screenDeviceSlice';
+import Unauthorized from './pages/Unauthorized';
 
 const mediaQueryIsMobileDevice = window.matchMedia('(max-width: 820px)')
 
@@ -39,9 +41,11 @@ function App() {
           <Route path='gallery' element={<Gallery/>} />
           <Route path='login' element={<Login/>} />
           <Route path='register' element={<Register/>} />
+          <Route path='unauthorized' element={<Unauthorized />} />
         </Route>
         <Route element={<RequireAuth allowedRoles={['admin']} />}>
-          <Route path="dashboard" element={<Dashboard />}>
+          <Route path="dashboard" element={<DashboardLayout />}>
+            <Route index element={<Dashboard />} />
             <Route path='products' element={<Products />} />
             <Route path='orders' element={<Orders />} />
           </Route>

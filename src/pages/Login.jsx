@@ -22,7 +22,8 @@ function Login() {
                     withCredentials: true
                 }
             )
-            dispatch(setCredentials(response.data))
+            const { userId, accessToken, roles} = response.data
+            dispatch(setCredentials({userId, accessToken, roles}))
             navigate('/')
         } catch (error) {
             if(error?.response.data?.message) {

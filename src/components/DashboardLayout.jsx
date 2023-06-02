@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom"
 
-function Dashboard() {
+function DashboardLayout() {
     return (
         <>
             <nav>
@@ -12,4 +12,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default DashboardLayout

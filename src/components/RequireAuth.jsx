@@ -4,6 +4,7 @@ import { useLocation, Navigate, Outlet } from "react-router-dom";
 
 const RequireAuth = ({ allowedRoles }) => {
     const roles = useSelector(selectCurrentRoles);
+    console.log(roles)
     const user = useSelector(selectCurrentUser);
     const location = useLocation();
 
