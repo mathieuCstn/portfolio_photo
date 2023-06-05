@@ -10,6 +10,10 @@ const userSlice = createSlice({
             state.roles = roles
             state.token = accessToken
         },
+        setAccessToken: (state, action) => {
+            const { accessToken } = action.payload
+            state.token = accessToken
+        },
         logOut: (state, action) => {
             state.userId = null
             state.roles = []
@@ -18,7 +22,7 @@ const userSlice = createSlice({
     }
 })
 
-export const {setCredentials, logOut} = userSlice.actions
+export const {setCredentials, setAccessToken, logOut} = userSlice.actions
 
 export default userSlice.reducer
 

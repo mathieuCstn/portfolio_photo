@@ -5,7 +5,7 @@ function DashboardLayout() {
         <>
             <nav>
                 <NavLink to='products'>Articles</NavLink>
-                <NavLink to='commands'>Commandes</NavLink>
+                <NavLink to='orders'>Commandes</NavLink>
             </nav>
             <Outlet />
         </>
