@@ -1,5 +1,27 @@
 # portfolio_photo - application front
-Ce projet est encore en développement. Actuellement très concentré sur le système de token côté front pour permettre l'accès aux routes et pages protégées.
+
+Afin de tester les fonctionnalités que procurent les privilèges administrateur. Un compte utilisateur a été créé à cet escient:
+
+compt : contact@mathieu.admin
+
+mdp   : root
+
+## Fichier de configuration
+Un fichier src/config.js a été créé pour vous permettre d'utiliser votre compt Cloudinary.
+
+`src/config.js`
+```
+const config = {
+    cloudinaryConfiguration: {
+        /**
+         * Fill this field to use the images in your cloudinary account.
+         */
+        cloudName: 'dmkyrjr2d'
+    }
+}
+
+export default config
+```
 
 ## Serveur API
 Le serveur api accéssible en [cliquant ici](https://github.com/mathieuCstn/portfolio_photo_api_back).
