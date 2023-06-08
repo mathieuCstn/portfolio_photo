@@ -7,7 +7,7 @@ compt : contact@mathieu.admin
 mdp   : root
 
 ## Fichier de configuration
-Un fichier src/config.js a été créé pour vous permettre d'utiliser votre compt Cloudinary.
+Un fichier src/config.js a été créé pour vous permettre d'utiliser votre compte Cloudinary.
 
 `src/config.js`
 ```
