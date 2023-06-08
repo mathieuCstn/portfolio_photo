@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { setCredentials } from "../redux/userSlice"
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
+import './forms.css'
 
 function Login() {
     const [email, setEmail] = useState('')
@@ -55,7 +56,7 @@ function Login() {
                     <button disabled={email?.length === 0 || password?.length === 0 ? true : false}>Se connecter</button>
 
                 </form>
-                <p>Besoin d'un compte ? <Link to='/register'>Cliqué ici !</Link></p>
+                <p>Besoin d'un compte ? <Link to='/register' className="highlight-link" >Cliqué ici !</Link></p>
             </div>
         </section>
     )

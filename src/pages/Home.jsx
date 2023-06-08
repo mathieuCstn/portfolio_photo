@@ -10,10 +10,12 @@ function Home() {
     return (
         <div>
             <section id="hero">
-                <div>
-                    <h1>Mathieu Constantin</h1>
-                    <p>Je suis un photographe partageant des histoires racontées par ces photos.</p>
-                    <Link to='/gallery' className='call-to-action'>Voire le portfolio</Link>
+                <div className='hero-first-container'>
+                    <div className="hero-texts-container">
+                        <h1>Mathieu Constantin</h1>
+                        <p>Je suis un photographe partageant des histoires racontées par ces photos.</p>
+                    </div>
+                    <Link to='/gallery' className='call-to-action hero-link'>Voire le portfolio</Link>
                 </div>
                 <div>
                     <AdvancedImage cldImg={cldImage} />

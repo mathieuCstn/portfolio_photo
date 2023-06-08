@@ -14,16 +14,34 @@
   --color-palette-dark-grey: #1E1E1E;
   --color-palette-light-grey: #F3F3F3;
   --color-palette-orange: #EC853B;
+  
 
-  --font-palette-desktop-header: 600 72px 'Playfair Display';
-  --font-palette-desktop-title-1: 400 24px 'Playfair Display';
-  --font-palette-desktop-title-2: 400 24px 'Poppins';
-  --font-palette-desktop-body-highlight: 600 20px 'Poppins';
-  --font-palette-desktop-body: 400 20px 'Poppins';
+  /* Step 1: 40.00px → 72.00px */
+  --size-40px-to-72px: clamp(2.50rem, calc(1.80rem + 3.48vw), 4.50rem);
 
-  --font-palette-mobile-header: 600 40px 'Playfair Display';
-  --font-palette-mobile-title-1: 400 20px 'Playfair Display';
-  --font-palette-mobile-title-2: 400 20px 'Poppins';
-  --font-palette-mobile-body-highlight: 600 16px 'Poppins';
-  --font-palette-mobile-body: 400 16px 'Poppins';
+  /* Step 2: 20.00px → 24.00px */
+  --size-20px-to-24px: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.50rem);
+
+  /* Step 3: 16.00px → 20.00px */
+  --size-16px-to-20px: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
+
+  --font-type-header: 600 var(--size-40px-to-72px) 'Playfair Display';
+  --font-type-title-1: 400 var(--size-20px-to-24px) 'Playfair Display';
+  --font-type-title-2: 400 var(--size-20px-to-24px) 'Poppins';
+  --font-type-body-highlight: 600 var(--size-16px-to-20px) 'Poppins';
+  --font-type-body: 400 var(--size-16px-to-20px) 'Poppins';
+
+  /*  The clamp() function avoids the use of media queries by defining minimum, maximum and ideal values in a single line
+    --desktop-header: 600 72px 'Playfair Display';
+    --desktop-title-1: 400 24px 'Playfair Display';
+    --desktop-title-2: 400 24px 'Poppins';
+    --desktop-body-highlight: 600 20px 'Poppins';
+    --desktop-body: 400 20px 'Poppins';
+
+    --mobile-header: 600 40px 'Playfair Display';
+    --mobile-title-1: 400 20px 'Playfair Display';
+    --mobile-title-2: 400 20px 'Poppins';
+    --mobile-body-highlight: 600 16px 'Poppins';
+    --mobile-body: 400 16px 'Poppins'; 
+  */
 }

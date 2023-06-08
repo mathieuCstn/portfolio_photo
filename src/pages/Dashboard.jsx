@@ -1,8 +1,10 @@
+import './Dashboard.css'
+
 function Dashboard() {
     return (
-        <div>
+        <section id='dashboard'>
             <h2>Bienvenu sur votre espace Administrateur</h2>
-        </div>
+        </section>
     )
 }
 
