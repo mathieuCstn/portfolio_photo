@@ -12,3 +12,19 @@ a.highlight-link {
 .offscreen {
     display: none;
 }
+
+.login-display {
+    width: 460px;
+    aspect-ratio: 4/5;
+    padding: 64px;
+    margin: auto;
+    background-color: #E6E6E6;
+}
+
+.register-display {
+    width: 460px;
+    aspect-ratio: 4/5;
+    padding: 64px;
+    margin: auto;
+    background-color: #E6E6E6;
+}

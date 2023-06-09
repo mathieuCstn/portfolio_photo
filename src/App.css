@@ -44,7 +44,7 @@ input {
 form {
   display: flex;
   flex-direction: column;
-  max-width: 320px;
+  /* max-width: 320px; */
 }
 
 form label {

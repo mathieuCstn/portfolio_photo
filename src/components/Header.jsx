@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logoSignature from '../assets/logo-signature_06-06-2023.svg'
-import './styles/Header.css'
+import './Header.css'
 import { useSelector } from 'react-redux'
 import { selectDeviceType } from '../redux/screenDeviceSlice'
 import HamburgerMenu from './HamburgerMenu'

@@ -29,7 +29,7 @@ function Gallery() {
                 {
                     productsList.map(product => (
                         <div key={product.id}>
-                            <AdvancedImage cldImg={cld.image(product.cld_public_id).resize(fill().width(400))}/>
+                            <AdvancedImage cldImg={cld.image(product.cld_public_id).resize(fill().width(600))}/>
                         </div>
                     ))
                 }

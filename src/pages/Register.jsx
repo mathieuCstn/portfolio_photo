@@ -134,8 +134,8 @@ function Register() {
                     <button disabled={!validEmail || !validPassword || !validMatch ? true : false}>S'enregistrer</button>
 
                 </form>
+                <p>Déjà d'un compte ? <Link to='/login' className="highlight-link" >Cliqué ici !</Link></p>
             </div>
-            <p>Déjà d'un compte ? <Link to='/login' className="highlight-link" >Cliqué ici !</Link></p>
         </section>
     )
 }

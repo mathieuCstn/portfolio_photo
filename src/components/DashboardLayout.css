@@ -3,13 +3,12 @@
 }
 
 .side-nav-container {
-    --side-nav-width: 25%;
-    width: var(--side-nav-width);
+    min-width: 25%;
     height: 100vh;
 }
 
 .side-nav {
-    width: var(--side-nav-width);
+    width: 25vw;
     height: 100vh;
     background-color: #242424;
     padding-top: clamp(2.50rem, calc(1.80rem + 3.48vw), 4.50rem);
@@ -39,6 +38,10 @@
 
 @media (max-width: 820px) {
     .side-nav-container {
-        --side-nav-width: 45%;
+        min-width: 45%;
+    }
+
+    .side-nav {
+        width: 45vw;
     }
 }

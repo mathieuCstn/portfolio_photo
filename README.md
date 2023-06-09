@@ -1,10 +1,17 @@
 # portfolio_photo - application front
 
+Le serveur api accéssible en [cliquant ici](https://github.com/mathieuCstn/portfolio_photo_api_back).
+
+## Compte administrateur de test
 Afin de tester les fonctionnalités que procurent les privilèges administrateur. Un compte utilisateur a été créé à cet escient:
 
 compt : contact@mathieu.admin
 
 mdp   : root
+
+## Accéder à l'espace administrateur
+L'administrateur est le seul rôle vous permettant d'ajouter, de supprimer ou de modifier les articles.
+Pour accéder à cet espace en local, rendez-vous sur le lien suvant une fois le serveur api et l'application front lancés : http://localhost:3000/dashboard
 
 ## Fichier de configuration
 Un fichier src/config.js a été créé pour vous permettre d'utiliser votre compte Cloudinary.
@@ -22,9 +29,6 @@ const config = {
 
 export default config
 ```
-
-## Serveur API
-Le serveur api accéssible en [cliquant ici](https://github.com/mathieuCstn/portfolio_photo_api_back).
 
 ## Maquette Figma
 Vous pouvez consulté la maquette figma en [cliquant ici](https://www.figma.com/file/nwRXEbc6HkD2QxuD3fW2B0/Portfolio-%26-vente-photo?type=design&t=Pd7MG4vIJMKfKroQ-6).
