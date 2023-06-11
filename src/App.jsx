@@ -14,6 +14,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setType } from './redux/screenDeviceSlice';
 import Unauthorized from './pages/Unauthorized';
+import Newsletter from './pages/Newsletter';
+import NotFound from './pages/NotFound';
 
 const mediaQueryIsMobileDevice = window.matchMedia('(max-width: 820px)')
 
@@ -42,12 +44,14 @@ function App() {
           <Route path='login' element={<Login/>} />
           <Route path='register' element={<Register/>} />
           <Route path='unauthorized' element={<Unauthorized />} />
+          <Route path='*' element={<NotFound />} />
         </Route>
         <Route element={<RequireAuth allowedRoles={['admin']} />}>
-          <Route path="dashboard" element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
             <Route path='products' element={<Products />} />
             <Route path='orders' element={<Orders />} />
+            <Route path='newsletter' element={<Newsletter />} />
           </Route>
         </Route>
       </Routes>

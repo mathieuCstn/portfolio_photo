@@ -9,6 +9,7 @@ function DashboardLayout() {
                     <NavLink to='.' end>Tableau de board</NavLink>
                     <NavLink to='products'>Articles</NavLink>
                     <NavLink to='orders'>Commandes</NavLink>
+                    <NavLink to='newsletter'>Newsletter</NavLink>
                     <NavLink to='/'>Go to website</NavLink>
                 </nav>
             </div>

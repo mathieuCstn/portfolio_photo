@@ -5,16 +5,21 @@ a.highlight-link {
     }
 }
 
-.hide {
-    display: none;
-}
-
+.hide,
 .offscreen {
     display: none;
 }
 
+section#login,
+section#register {
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .login-display {
-    width: 460px;
+    width: clamp(370px, 80vw, 460px);
     aspect-ratio: 4/5;
     padding: 64px;
     margin: auto;
@@ -22,7 +27,7 @@ a.highlight-link {
 }
 
 .register-display {
-    width: 460px;
+    width: clamp(370px, 80vw, 460px);
     aspect-ratio: 4/5;
     padding: 64px;
     margin: auto;

@@ -1,3 +1,12 @@
+body {
+  font: var(--font-type-body);
+}
+
+main {
+  min-height: 600px;
+  /* min-height: clamp(675px, 20vw ,1024px); */
+}
+
 h1,
 .font-header {
   font: var(--font-type-header);
@@ -11,10 +20,6 @@ h2,
 h3,
 .font-title-2 {
   font: var(--font-type-title-2);
-}
-
-body {
-  font: var(--font-type-body);
 }
 
 strong,
@@ -44,7 +49,6 @@ input {
 form {
   display: flex;
   flex-direction: column;
-  /* max-width: 320px; */
 }
 
 form label {
@@ -61,8 +65,8 @@ form label {
   width: clamp(196px ,19vw ,240px);
   aspect-ratio: 20/7;
   border-radius: 64rem;
-  transition: .6s ease-out;
+  transition: filter .4s ease-out;
   &:hover {
-    filter: saturate(120%);
+    filter: brightness(120%);
   }
 }

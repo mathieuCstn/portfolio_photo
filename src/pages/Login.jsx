@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useDispatch } from 'react-redux'
 import { setCredentials } from "../redux/userSlice"
 import { Link, useNavigate } from 'react-router-dom'
@@ -6,11 +6,17 @@ import axios from '../api/axios'
 import './forms.css'
 
 function Login() {
+    const input = useRef()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
+    useEffect(() => {
+        input.current.focus()
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -43,6 +49,7 @@ function Login() {
 
                     <label htmlFor="login-email">Email</label>
                     <input type="email" id="login-email" 
+                        ref={input}
                         aria-describedby="email" 
                         onChange={(e) => setEmail(e.currentTarget.value)} 
                     />

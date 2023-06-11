@@ -1,0 +1,15 @@
+section#not-found nav {
+    margin: 1rem 0 0 1rem;
+}
+
+section#not-found nav li a {
+    &:hover {
+        color: var(--color-palette-orange);
+    }
+}
+
+@media (max-width: 820px) {
+    section#not-found nav {
+        margin: 1rem 0 0 0;
+    }
+}

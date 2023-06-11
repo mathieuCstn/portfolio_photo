@@ -77,8 +77,9 @@ function Products() {
 
     return (
         <section id="products">
+            <h1>Articles</h1>
             <dialog id="new-product-form">
-                <button onClick={() => setShowNewProductForm(false)}>Fermer le formulaire d'envoi ❌</button>
+                <button onClick={() => setShowNewProductForm(false)}>Fermer le formulaire d'ajout ❌</button>
                 <form onSubmit={handleSubmitNewProduct}>
                     <label htmlFor="new-article-form-image">Votre image</label>
                     <input type="file" name="image" id="new-article-form-image" />
@@ -127,11 +128,11 @@ function Products() {
 
                             <button>Mettre à joure l'article ✅</button>
                         </form>
-                        <button onClick={handleClickDeleteProductButton} style={{color: 'red'}}>Supprimer l'article</button>
+                        <button onClick={handleClickDeleteProductButton} className="delete-button">Supprimer l'article</button>
                     </dialog>
                 ) : null
             }
-            <button onClick={() => setShowNewProductForm(true)} className="NewProductButton">Nouvel Article</button>
+            <button onClick={() => setShowNewProductForm(true)} className="new-product-button">Nouvel Article</button>
             <div className="products-display">
                 {
                     productsList.map(_product => (

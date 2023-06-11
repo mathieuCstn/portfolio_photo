@@ -1,0 +1,40 @@
+section#newsletter {
+    width: 100%;
+}
+
+table,
+td,
+th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 600px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+caption {
+    text-align: center;
+}
+
+th {
+    font: var(--font-type-title-2);
+    font-weight: bold;  
+}
+
+td {
+    font-size: 1rem;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
