@@ -7,7 +7,7 @@ function NotFound() {
             <h1>Page non trouvé</h1>
             <p>
                 Il semblerait que ce soit une impasse...<br />
-                Permettez-vous que je vous suggère les liens suivants ?
+                Puis-je vous suggérer les liens suivants ?
             </p>
             <nav>
                 <ul>

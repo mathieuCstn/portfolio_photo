@@ -6,7 +6,7 @@ function DashboardLayout() {
         <div id="dashboard-layout">
             <div className="side-nav-container">
                 <nav className="side-nav">
-                    <NavLink to='.' end>Tableau de board</NavLink>
+                    <NavLink to='.' end>Tableau de bord</NavLink>
                     <NavLink to='products'>Articles</NavLink>
                     <NavLink to='orders'>Commandes</NavLink>
                     <NavLink to='newsletter'>Newsletter</NavLink>

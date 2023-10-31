@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react"
 import axios from "../api/axios"
 import { Link } from "react-router-dom"
 import './forms.css'
+import { Helmet } from "react-helmet"
 
 const EMAIL_REGEX = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,5})+$/
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#€$%]).{8,24}$/
@@ -77,6 +78,10 @@ function Register() {
         </section>
     ) : (
         <section id="register">
+            <Helmet>
+                <title>Créer un compte</title>
+                <meta name="description" content="Créer un compte pour avoir accès à plus de fonctionnalités" />
+            </Helmet>
             <h1>S'enregistrer</h1>
             <div className="register-display">
                 <p ref={errorRef} className={errorMessage ? "error-message" : "offscreen"} aria-live="assertive">{errorMessage}</p>

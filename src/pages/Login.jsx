@@ -4,6 +4,7 @@ import { setCredentials } from "../redux/userSlice"
 import { Link, useNavigate } from 'react-router-dom'
 import axios from '../api/axios'
 import './forms.css'
+import { Helmet } from "react-helmet"
 
 function Login() {
     const input = useRef()
@@ -42,6 +43,10 @@ function Login() {
     }
     return (
         <section id="login">
+            <Helmet>
+                <title>Se connecter</title>
+                <meta name="description" content="Page de connection" />
+            </Helmet>
             <h1>Se Connecter</h1>
             <div className="login-display">
                 <p className={errorMessage ? "error-message" : "offscreen"} aria-live="assertive">{errorMessage}</p>

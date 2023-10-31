@@ -3,12 +3,17 @@ import {CloudinaryImage} from '@cloudinary/url-gen'
 import {AdvancedImage} from '@cloudinary/react'
 import {fill} from '@cloudinary/url-gen/actions/resize'
 import './Home.css'
+import { Helmet } from 'react-helmet'
 
 const cldImage = new CloudinaryImage('portfolio_photo/AX8A9491_vo9nu2', {cloudName: 'dmkyrjr2d'}).resize(fill().width(1000))
 
 function Home() {
     return (
         <section id='home'>
+            <Helmet>
+                <title>Accueil</title>
+                <meta name="description" content="Accueil du site Mathieu Constantin" />
+            </Helmet>
             <section id="hero">
                 <div className='hero-first-container'>
                     <div className="hero-texts-container">

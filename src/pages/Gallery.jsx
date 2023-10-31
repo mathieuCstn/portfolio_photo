@@ -5,6 +5,7 @@ import { AdvancedImage } from "@cloudinary/react"
 import { fill } from "@cloudinary/url-gen/actions/resize"
 import config from '../config'
 import './Gallery.css'
+import { Helmet } from "react-helmet"
 
 function Gallery() {
     const [productsList, setProductsList] = useState([])
@@ -25,6 +26,10 @@ function Gallery() {
 
     return (
         <section id="gallery">
+            <Helmet>
+                <title>Gallery Photo</title>
+                <meta name="description" content="La galerie photos de Mathieu Constantin" />
+            </Helmet>
             <div className="gallery-container">
                 {
                     productsList.map(product => (
