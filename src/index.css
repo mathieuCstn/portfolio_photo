@@ -23,7 +23,7 @@
   --size-20px-to-24px: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.50rem);
 
   /* Step 3: 16.00px → 20.00px */
-  --size-16px-to-20px: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
+  --size-16px-to-20px: clamp(1.25rem, calc(0.91rem + 0.43vw), 1.25rem);
 
   --font-type-header: 600 var(--size-40px-to-72px) 'Playfair Display';
   --font-type-title-1: 400 var(--size-20px-to-24px) 'Playfair Display';

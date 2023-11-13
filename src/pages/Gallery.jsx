@@ -27,14 +27,14 @@ function Gallery() {
     return (
         <section id="gallery">
             <Helmet>
-                <title>Gallery Photo</title>
+                <title>Gallery - Mathieu constantin</title>
                 <meta name="description" content="La galerie photos de Mathieu Constantin" />
             </Helmet>
             <div className="gallery-container">
                 {
                     productsList.map(product => (
                         <div key={product.id}>
-                            <AdvancedImage cldImg={cld.image(product.cld_public_id).resize(fill().width(600))}/>
+                            <AdvancedImage cldImg={cld.image(product.cld_public_id).resize(fill().width(600))} alt={product.cld_public_id} />
                         </div>
                     ))
                 }

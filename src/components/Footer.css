@@ -39,7 +39,9 @@ footer .footer-content {
     gap: 1rem 2rem;
 }
 
-footer .footer-content > * {
+footer .footer-content > .footer-links, 
+footer .footer-content > .footer-map, 
+footer .footer-content > .footer-newsletter {
     flex: 1;
     min-width: 240px;
     min-height: 200px;
@@ -55,6 +57,12 @@ footer .footer-links nav {
     font: var(--font-type-body);
     margin: 1rem 0 0 1rem;
     display: inline-block;
+}
+
+footer .footer-links nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 footer .footer-links nav a:hover {

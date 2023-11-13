@@ -1,0 +1,28 @@
+#about {
+    min-height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+#about > img {
+    width: 300px;
+    height: auto;
+}
+
+#about > .texts-container {
+    text-align: center;
+    margin: 0 4rem;
+}
+
+#about > .texts-container > h2 {
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* #about > p {
+    text-align: center;
+} */

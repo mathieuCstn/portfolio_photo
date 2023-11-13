@@ -12,6 +12,8 @@ header {
     width: 100%;
     padding: 0 1.5rem;
     background-color: var(--color-palette-white);
+    /* background-color: hsla(0, 0%, 100%, 0.9);
+	backdrop-filter: blur(1rem); */
     border-bottom: #000 solid 1px;
     position: fixed;
     top: 0;
@@ -29,13 +31,15 @@ header > [class*="-left"] {
 
 header > [class*="-center"] {
     justify-content: center;
+    flex: 2;
 }
 
 header > [class*="-right"] {
     justify-content: flex-end;
 }
 
-header > * {
+header > nav,
+header > div {
     display: flex;
     align-items: center;
 }
@@ -49,7 +53,7 @@ header .logo img {
 }
 
 header nav {
-    gap: 1rem;
+    gap: 2rem;
 }
 
 header#header nav a {

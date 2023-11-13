@@ -39,6 +39,7 @@ function Footer() {
                             <ul>
                                 <li><Link to='/'>Accueil</Link></li>
                                 <li><Link to='/gallery'>Gallery</Link></li>
+                                <li><Link to='/about'>À Propos</Link></li>
                                 <li><Link to='/login'>Se connecter</Link></li>
                                 <li><Link to='/register'>s'enregistrer</Link></li>
                             </ul>

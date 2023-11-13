@@ -1,5 +1,6 @@
 import React from 'react';
-import { hydrate, render } from 'react-dom'
+// import { hydrate, render } from 'react-dom'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import 'the-new-css-reset/css/reset.css'
 import './index.css';
 import App from './App';
@@ -10,27 +11,27 @@ import { BrowserRouter } from 'react-router-dom'
 
 const rootElement = document.getElementById('root')
 if(rootElement.hasChildNodes()) {
-  hydrate(
+  hydrateRoot(
+    rootElement,
     <React.StrictMode>
       <Provider store={store}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
       </Provider>
-    </React.StrictMode>,
-    rootElement
+    </React.StrictMode>
   )
 } else {
-  render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
-    </React.StrictMode>,
-    rootElement
-  )
+  createRoot(rootElement)
+    .render(
+      <React.StrictMode>
+        <Provider store={store}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Provider>
+      </React.StrictMode>
+    )
 }
 
 // If you want to start measuring performance in your app, pass a function

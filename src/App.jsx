@@ -16,6 +16,7 @@ import { setType } from './redux/screenDeviceSlice';
 import Unauthorized from './pages/Unauthorized';
 import Newsletter from './pages/Newsletter';
 import NotFound from './pages/NotFound';
+import About from './pages/About';
 
 const mediaQueryIsMobileDevice = window.matchMedia('(max-width: 820px)')
 
@@ -38,11 +39,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<Layout />}>
           <Route index element={<Home/>} />
-          <Route path='gallery' element={<Gallery/>} />
-          <Route path='login' element={<Login/>} />
-          <Route path='register' element={<Register/>} />
+          <Route path='gallery' element={<Gallery />} />
+          <Route path='about' element={<About />} />
+          <Route path='login' element={<Login />} />
+          <Route path='register' element={<Register />} />
           <Route path='unauthorized' element={<Unauthorized />} />
           <Route path='*' element={<NotFound />} />
         </Route>

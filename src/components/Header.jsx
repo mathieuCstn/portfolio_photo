@@ -37,6 +37,7 @@ function Header() {
                         <nav className='header-center'>
                             <NavLink to='/'>Home</NavLink>
                             <NavLink to='/gallery'>Gallery</NavLink>
+                            <NavLink to='/about'>À Propos</NavLink>
                         </nav>
                         <nav className='header-right'>
                             <NavLink to='/login'>Se connecter</NavLink>

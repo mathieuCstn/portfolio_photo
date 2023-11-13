@@ -65,8 +65,9 @@ form label {
   width: clamp(196px ,19vw ,240px);
   aspect-ratio: 20/7;
   border-radius: 64rem;
-  transition: filter .4s ease-out;
+  transition: box-shadow .3s ease-out;
   &:hover {
-    filter: brightness(120%);
+    /* filter: brightness(120%); */
+    box-shadow: 0 1px 40px rgba(170, 14, 14, 0.4);
   }
 }
